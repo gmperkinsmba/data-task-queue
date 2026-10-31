@@ -128,7 +128,7 @@ class LocalHTTPServer(ThreadingHTTPServer):
 
 def serve(root, port=8333):
     server = make_server(root, port)
-    print(f'Ultimate Agent Harness http://127.0.0.1:{server.server_port}', flush=True)
+    print(f'Data Task Queue http://127.0.0.1:{server.server_port}', flush=True)
     try:
         server.serve_forever()
     finally:
@@ -145,7 +145,7 @@ if __name__ == '__main__':
         parser.error('Runtime data must be outside the checkout.')
     os.umask(0o077)
     server = make_server(data, args.port)
-    print(f'Ultimate Agent Harness http://127.0.0.1:{server.server_port}', flush=True)
+    print(f'Data Task Queue http://127.0.0.1:{server.server_port}', flush=True)
     try:
         server.serve_forever()
     finally:
