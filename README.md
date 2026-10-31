@@ -1,4 +1,4 @@
-# Ultimate Agent Harness
+# Data Task Queue
 
 Import records, find evidence, and review tasks in a local queue.
 
@@ -19,7 +19,7 @@ python3.12 -m venv .desktop-venv
 .desktop-venv/bin/python install_desktop.py
 ```
 
-The install step puts `Ultimate Agent Harness.app` in `~/Applications`. Open it in Finder. Close its window or choose **Quit** to stop the local server. The app bundle includes Python. Runtime data stays in `~/.local/share/ultimate-agent-harness`; set `UAH_RUNTIME` before launching from a shell to use another folder. Moving the app to Trash leaves runtime data in place.
+The install step puts `Data Task Queue.app` in `~/Applications`. Open it in Finder. Close its window or choose **Quit** to stop the local server. The app bundle includes Python. Runtime data stays in `~/.local/share/ultimate-agent-harness`; set `UAH_RUNTIME` before launching from a shell to use another folder. Moving the app to Trash leaves runtime data in place.
 
 The bundle uses ad-hoc signing. It has no Developer ID signature and is not notarized. macOS may ask you to approve opening it. The native app builds on macOS only.
 
@@ -73,4 +73,4 @@ The suite checks rollback and replay. It checks source edits and deletes. It che
 
 SQLite is the main store for evidence, history, tasks, and pending projections. DuckDB is a derived destination. These databases do not share a transaction. Receipts and retryable work record each step.
 
-All bundled examples are made up. The `bd3` package has original MIT code shared with BigDaddyDataDelegator. The `voodoosql` module has original MIT catalog code shared with voodooSQL. DuckDB is MIT licensed. The repository has no private source history. It has no personal settings or real source data. Git ignores runtime databases, exports, and local environments.
+All bundled examples are made up. The `bd3` package has original MIT code shared with SQLite Batch Loader. The `voodoosql` module has original MIT catalog code shared with voodooSQL. DuckDB is MIT licensed. The repository has no private source history. It has no personal settings or real source data. Git ignores runtime databases, exports, and local environments.

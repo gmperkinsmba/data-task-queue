@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Native macOS shell for Ultimate Agent Harness."""
+"""Native macOS shell for Data Task Queue."""
 from __future__ import annotations
 
 import os
@@ -49,14 +49,14 @@ def run() -> None:
             window.destroy()
 
     menu = [
-        Menu("Ultimate Agent Harness", [MenuAction("Settings…", open_settings), MenuAction("Quit", quit_app)]),
+        Menu("Data Task Queue", [MenuAction("Settings…", open_settings), MenuAction("Quit", quit_app)]),
         Menu("View", [MenuAction("Reload", reload_app)]),
     ]
     try:
         worker.start()
         wait_until_ready(url)
         window = webview.create_window(
-            "Ultimate Agent Harness", url, width=1080, height=760, min_size=(800, 580), menu=menu
+            "Data Task Queue", url, width=1080, height=760, min_size=(800, 580), menu=menu
         )
         install_policy(origin)
         webview.start()
@@ -74,8 +74,8 @@ if __name__ == "__main__":
         import AppKit
 
         alert = AppKit.NSAlert.alloc().init()
-        alert.setMessageText_("Ultimate Agent Harness could not start")
-        alert.setInformativeText_("The local app failed to open. Restart Ultimate Agent Harness and try again.")
+        alert.setMessageText_("Data Task Queue could not start")
+        alert.setInformativeText_("The local app failed to open. Restart Data Task Queue and try again.")
         alert.addButtonWithTitle_("OK")
         alert.runModal()
         raise SystemExit(1)

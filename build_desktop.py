@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a local macOS Ultimate Agent Harness application bundle."""
+"""Build a local macOS Data Task Queue application bundle."""
 from __future__ import annotations
 
 import plistlib
@@ -13,7 +13,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-APP_NAME = "Ultimate Agent Harness"
+APP_NAME = "Data Task Queue"
 ASSET_MANIFEST = ROOT / "desktop-assets.txt"
 OWNER_MARKER = ROOT / "desktop-app-owner.txt"
 BUNDLE_ID = "io.github.gmperkinsmba.ultimate-agent-harness"
@@ -69,7 +69,7 @@ def main() -> int:
         destination.parent.mkdir(exist_ok=True)
         if destination.exists():
             if not owned_bundle(destination):
-                raise SystemExit(f"Refusing to replace an app without the Ultimate Agent Harness ownership marker: {destination}")
+                raise SystemExit(f"Refusing to replace an app without the Data Task Queue ownership marker: {destination}")
             backup_owned_bundle(destination)
         shutil.move(str(build_root / "dist" / f"{APP_NAME}.app"), str(destination))
     print(ROOT / "dist" / f"{APP_NAME}.app")
