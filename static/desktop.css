@@ -1,0 +1,12 @@
+.desktop-mode header{max-width:1120px;padding:15px 28px}
+.desktop-mode main{max-width:1120px;padding-inline:28px}
+.desktop-mode .hero{padding:28px 0 24px;gap:36px}
+.desktop-mode h1{font-size:32px;line-height:1.08;margin-bottom:14px}
+.desktop-mode .intro{font-size:14px;line-height:1.5;margin-bottom:18px}
+.desktop-mode .flow{padding:22px;transform:none}
+.desktop-mode .flow b{font-size:17px}
+.desktop-mode #notice{padding:11px 15px;margin-bottom:18px}
+.desktop-mode nav{margin-bottom:24px}
+.desktop-mode .card{padding:18px}
+.desktop-mode footer{max-width:1120px;padding:24px 28px}
+@media(max-height:720px){.desktop-mode .hero{padding:18px 0}.desktop-mode .flow{padding:16px}.desktop-mode .flow i{height:20px}}

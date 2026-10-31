@@ -1,0 +1,3 @@
+Ultimate Agent Harness desktop bundle
+io.github.gmperkinsmba.ultimate-agent-harness
+local-build-owner-marker-v1
